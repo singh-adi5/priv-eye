@@ -1,21 +1,7 @@
-# Python cache
+venv/
 __pycache__/
 *.pyc
-*.pyo
 
-# Virtual environments
-venv/
-.venv/
-
-# Local / generated data (avoid leaking host info)
-data/raw_state.json
-data/feature_vector.csv
-data/dataset.csv
 data/*.csv
 data/*.pkl
-data/*.joblib
-
-# OS / editor
-.DS_Store
-.idea/
-.vscode/
+data/raw_state.json

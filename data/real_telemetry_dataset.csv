@@ -1,2 +1,0 @@
-timestamp_utc,host_id,kernel_major,kernel_minor,kernel_patch,kernel_flavor,suid_pkexec,suid_su,suid_sudo,suid_mount,suid_passwd,suid_chsh,suid_total_count,sudo_has_all,sudo_has_nopasswd,euid_is_root,risk_label
-2026-02-27T18:50:50.206996,kali,6,16,8,kali-amd64,1,1,1,1,1,1,28,1,0,0,-1
