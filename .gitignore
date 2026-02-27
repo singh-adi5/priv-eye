@@ -1,4 +1,4 @@
-# Python
+# Python cache
 __pycache__/
 *.pyc
 *.pyo
@@ -7,12 +7,13 @@ __pycache__/
 venv/
 .venv/
 
-# Data outputs (avoid leaking host telemetry)
+# Local / generated data (avoid leaking host info)
 data/raw_state.json
 data/feature_vector.csv
 data/dataset.csv
-data/training_dataset*.csv
-data/priveye_model.pkl
+data/*.csv
+data/*.pkl
+data/*.joblib
 
 # OS / editor
 .DS_Store
