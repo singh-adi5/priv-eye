@@ -248,7 +248,7 @@ class PrivEyeOracle:
         self.trained_features = payload["features"]
 
     # ---------------------------
-    # Phase 3: Train on real dataset.csv (preferred)
+    # Phase 3: Train on real dataset, this one is synthetic
     # ---------------------------
     def try_train_on_real_dataset(self, min_rows: int = 30, min_per_class: int = 8) -> bool:
         """
@@ -332,11 +332,11 @@ class PrivEyeOracle:
 if __name__ == "__main__":
     oracle = PrivEyeOracle(DATA_DIR)
 
-    # Optional: build a real row each time you run (keeps dataset growing)
-    # Change label to low/medium/high when you have a ground-truth view of the host.
+    # Optional: build a real row each time you run (keeps dataset growing for use cases)
+    # Change label to low/medium/high
     oracle.build_dataset_row(label="unknown", timeout=10)
 
-    # Prefer real training if enough labelled rows exist; otherwise fallback to synthetic
+    # Prefer real training if enough labelled rows exist; otherwise stick to synthetic fo prototype na dresearch
     trained_real = oracle.try_train_on_real_dataset(min_rows=30, min_per_class=8)
     if not trained_real:
         dataset = oracle.synthesize_data_3class(num_samples=1200)
